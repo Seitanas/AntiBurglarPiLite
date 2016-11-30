@@ -7566,26 +7566,20 @@ http://www.ee.siue.edu/~alozows/library/datasheets/BFR96.pdf</description>
 <instance part="X11" gate="-2" x="152.4" y="-38.1" rot="R90"/>
 <instance part="X11" gate="-3" x="157.48" y="-38.1" rot="R90"/>
 <instance part="T3" gate="G$1" x="12.7" y="-53.34"/>
-<instance part="T4" gate="G$1" x="73.66" y="38.1"/>
+<instance part="T4" gate="G$1" x="73.66" y="38.1" rot="MR180"/>
 </instances>
 <busses>
 </busses>
 <nets>
 <net name="GND" class="3">
 <segment>
-<wire x1="25.4" y1="43.18" x2="50.8" y2="43.18" width="0.1524" layer="91"/>
-<junction x="50.8" y="43.18"/>
-<pinref part="GND1" gate="1" pin="GND"/>
 <pinref part="OK2" gate="G$1" pin="EMIT"/>
+<pinref part="GND1" gate="1" pin="GND"/>
+<wire x1="25.4" y1="43.18" x2="50.8" y2="43.18" width="0.1524" layer="91"/>
 <wire x1="25.4" y1="43.18" x2="25.4" y2="-2.54" width="0.1524" layer="91"/>
-<wire x1="50.8" y1="43.18" x2="76.2" y2="43.18" width="0.1524" layer="91"/>
-<pinref part="X12" gate="G$1" pin="4"/>
-<wire x1="76.2" y1="43.18" x2="144.78" y2="43.18" width="0.1524" layer="91"/>
-<wire x1="144.78" y1="43.18" x2="144.78" y2="55.88" width="0.1524" layer="91"/>
-<junction x="144.78" y="43.18"/>
-<pinref part="LED2" gate="G$1" pin="C"/>
-<pinref part="T4" gate="G$1" pin="C"/>
-<junction x="76.2" y="43.18"/>
+<pinref part="T4" gate="G$1" pin="E"/>
+<wire x1="76.2" y1="43.18" x2="50.8" y2="43.18" width="0.1524" layer="91"/>
+<junction x="50.8" y="43.18"/>
 </segment>
 <segment>
 <pinref part="GND2" gate="1" pin="GND"/>
@@ -7680,17 +7674,10 @@ http://www.ee.siue.edu/~alozows/library/datasheets/BFR96.pdf</description>
 </net>
 <net name="N$10" class="0">
 <segment>
-<wire x1="71.12" y1="38.1" x2="71.12" y2="25.4" width="0.1524" layer="91"/>
 <wire x1="71.12" y1="25.4" x2="86.36" y2="25.4" width="0.1524" layer="91"/>
 <pinref part="R4" gate="G$1" pin="2"/>
 <pinref part="T4" gate="G$1" pin="B"/>
-</segment>
-</net>
-<net name="N$12" class="0">
-<segment>
-<wire x1="76.2" y1="33.02" x2="81.28" y2="33.02" width="0.1524" layer="91"/>
-<pinref part="SG1" gate="G$1" pin="1"/>
-<pinref part="T4" gate="G$1" pin="E"/>
+<wire x1="71.12" y1="25.4" x2="71.12" y2="38.1" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$13" class="0">
@@ -7951,6 +7938,20 @@ http://www.ee.siue.edu/~alozows/library/datasheets/BFR96.pdf</description>
 <pinref part="LED1" gate="G$1" pin="C"/>
 <pinref part="R2" gate="G$1" pin="1"/>
 <wire x1="17.78" y1="60.96" x2="17.78" y2="55.88" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$11" class="3">
+<segment>
+<pinref part="X12" gate="G$1" pin="4"/>
+<wire x1="144.78" y1="43.18" x2="144.78" y2="55.88" width="0.1524" layer="91"/>
+<pinref part="LED2" gate="G$1" pin="C"/>
+</segment>
+</net>
+<net name="N$12" class="0">
+<segment>
+<pinref part="T4" gate="G$1" pin="C"/>
+<pinref part="SG1" gate="G$1" pin="1"/>
+<wire x1="76.2" y1="33.02" x2="81.28" y2="33.02" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
