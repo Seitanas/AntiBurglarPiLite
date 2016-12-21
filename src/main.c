@@ -247,6 +247,11 @@ int main (void){
 	    char door_status[10];
 	    char arm_status[10];
 	    char siren_status[10];
+	    char motion_status[10];
+	    if (motion)
+		sprintf(motion_status,"yes. ");
+	    else
+		sprintf(motion_status,"no. ");
 	    if (window)
 		sprintf(window_status,"open. ");
 	    else
@@ -263,7 +268,7 @@ int main (void){
 		sprintf(arm_status,"armed.");
 	    else
 		sprintf(arm_status,"disarmed.");
-    	    sprintf(uptime,"UP: %i days, %i hours, %i minutes, %i seconds. Load average: %.2f %.2f %.2f Temp1: %.2f Temp2: %.2f. Window: %sDoor: %sSiren: %sSystem: %s",days,hours,minutes, info.uptime,info.loads[0]/65536.0, info.loads[1]/65536.0, info.loads[2]/65536.0,temp1/1000,temp2/1000,window_status,door_status,siren_status,arm_status);
+    	    sprintf(uptime,"UP: %i days, %i hours, %i minutes, %i seconds. Load average: %.2f %.2f %.2f Temp1: %.2f Temp2: %.2f. Window: %sDoor: %s Motion detected: %s Siren: %sSystem: %s",days,hours,minutes, info.uptime,info.loads[0]/65536.0, info.loads[1]/65536.0, info.loads[2]/65536.0,temp1/1000,temp2/1000,window_status,door_status,motion_status,siren_status,arm_status);
 	    sprintf(temp_message,"Client %s is requesting status.",sms_sender);	    
 	    syslog_write(temp_message);
 	    gnokii_send(sms_sender,uptime);
