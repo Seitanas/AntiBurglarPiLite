@@ -178,7 +178,7 @@ int main (void){
 	exit(EXIT_FAILURE);
     init_gpio();
     disarm_beep(); //beep at system startup
-    daemon();
+//    daemon();
     setlocale(LC_ALL, "");
     sleep (1); //wait for dust to settle
     armed=0;
