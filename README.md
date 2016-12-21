@@ -21,14 +21,14 @@ http://wiringpi.com/download-and-install/
 Make sure to create /etc/gnokii.conf config file with configuration for your GSM modem or phone.  
 Example of working gnokii.conf file with "Huawei Technologies Co., Ltd. E220 HSDPA Modem / E230/E270/E870 HSDPA/HSUPA" modem:  
   
-  [global]
-  model = AT
-  port = /dev/ttyUSB0
-  connection = serial
+    [global]
+    model = AT
+    port = /dev/ttyUSB0
+    connection = serial
 
 To build and install system
-  make
-  make install
+    make
+    make install
 
 If using raspbian distribution, copy init script from debian_init folder  
 to /etc/init.d/ folder.  
